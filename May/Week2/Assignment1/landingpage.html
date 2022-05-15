@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Landinh Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        @import url(./variable.css);
+
+
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0%;
+            box-shadow: 0px 0px 8px rgb(0, 0, 0 /6%);
+            width: 100%;
+            background-color: var(--orange-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+
+        }
+
+
+        .nav-items ul {
+            display: flex;
+            padding-right: 30px;
+            list-style-type: none;
+            font-weight: 800;
+            margin: 0%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        .nav-items li {
+            float: right;
+
+        }
+        .nav-items li a {
+            text-decoration: none;
+            display: block;
+            margin: auto;
+            padding: 25px;
+           color: var(--text-color);
+
+
+        }
+
+        .container{
+            
+            display: block;
+            margin: auto;
+            padding: 4% 0%;
+            margin: auto;
+            
+        }
+
+        .logo h1 {
+            margin-left: 20px;
+            padding: 1% 2%;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--text-color);
+        }
+
+        .banner {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--background-color);
+            border-radius: 30px;
+            width: 95%;
+            margin: 80px 60px 0px 50px;
+            padding-top: 4%;
+        }
+
+        .banner .image {
+            padding: 4% 10%;
+           
+        }
+
+        .banner .content {
+            padding: 0% 5%;
+        }
+
+        .banner .content h4 {
+            font-weight: var(--bold-font);
+            font-size: 13px;
+            line-height: 22px;
+            letter-spacing: 6px;
+            color: var(--orange-color);
+
+        }
+
+        .banner .content h2 {
+            line-height: 30px;
+            font-weight: 800;
+            font-size: 32px;
+            letter-spacing: 2px;
+            color: var(--text-color);
+        }
+
+        .banner .content p {
+            font-size: 15px;
+            line-height: 28px;
+            color: var(--text-color)
+           
+        }
+
+        .content .btn {
+            background-color: rgb(12, 73, 53);
+            color: white;
+            font-size: 16px;
+            padding: 2% 5%;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            margin: 2% 0%;
+        }
+
+        .feature {
+
+        }
+        .feature .feature-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .feature-wrapper .feature {
+            display: flex;
+            align-items: center;
+        }
+        .feature .icon {
+            text-align: center;
+            line-height: 80px;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            font-size: 30px; 
+            padding: 1% 3%;
+            background-color: rgba(214, 227, 235, 0.5);
+        }
+
+        .feature .content {
+            padding-left: 8%;
+        }
+
+        .feature .content h2 {
+            font-weight: var(--bolder-font);
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: -0.3px;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            
+        }
+
+        .feature .content p {
+            font-weight: var(--bolder-font);
+            font-weight: 24px;
+            line-height: 32px;
+            letter-spacing: -0.3px;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+/* gallery section */
+        .gallery .image {
+            display: flex;
+            justify-content: space-around;
+        }
+        .gallery .content {
+            font-size: 42px;
+            font-weight: var(--bolder-font);
+            margin-bottom: 4%;
+            text-align: center;
+        }
+
+        /* video section */
+        .video-demo {
+            display: flex;
+            width: 100%;
+        }
+        .video-demo .content {
+            background-color: var(--orange-color);
+            color: var(--white-color);
+            padding: 200px 100px 200px 100px;
+            width: 40%;
+        }
+        .video-demo .content h1 {
+            font-size: 42px;
+            line-height: 57px;
+        }
+        .video-demo .video-content {
+            background: url(https://img.freepik.com/free-photo/abstract-techno-background-with-connecting-lines_1048-5570.jpg?t=st=1652206882~exp=1652207482~hmac=788cd6d5508e0d16df007a729f9e85187f6c28ced9fbd1fc5a4b22b424027754&w=740);
+            background-repeat: no-repeat;
+            width: 60%;
+            position: relative;
+        }
+        .video-content .video a {
+            color: var(--white-color);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+        .video a i {
+            color: var(--white-color);
+            width: 90px;
+            height: 90px;
+            border: 3px solid var(--white-color);
+            border-radius: 50%;
+            background: transparent;
+            line-height: 90px;
+            text-align: center;
+
+        }
+
+        /* newsletter */
+        .newsletter {
+            text-align: center;
+            width: 30%;
+        }
+        
+        .newsletter .content h1 {
+            font-size: 42px;
+            line-height: 50px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            opacity: 0.9;
+            color: var(--text-color);
+        }
+
+        .newsletter .content p {
+            font-size: 17px;
+            line-height: 30px;
+            color: var(--text-color);
+            opacity: 0.7;
+        }
+
+        .newsletter-form {
+            margin-top: 9%;
+        }
+
+        .form {
+            display: flex;
+        }
+
+        .form .form-control {
+            border-radius: 10px 0px 0px 10px;
+            height: 70px;
+            border: 1px solid rgba(223, 223, 223, 0.7);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 17px;
+            line-height: 30px;
+            padding-left: 4% ;
+            width: 100%;
+
+        }
+
+        .form .btn {
+            margin-top: 0 ;
+            min-width: 200px;
+            height: 74px;
+            border-radius: 0px 10px 10px 0px;
+            width: 100%;
+            text-transform: uppercase;
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            line-height: 20px;
+            letter-spacing: 4px;
+
+        }
+
+        /* footer */
+
+        .footer {
+            border-radius: 30px;
+            background-color: var(--background-color);
+            margin: 80px 60px 0px 50px;
+            width: 95%;
+            padding-top: 4%;
+        }
+
+        .footer .wrapper {
+            display: flex;
+            justify-content: space-around;
+            padding: 2% 0%;
+            margin: 2% 0%;
+                  }
+                  .wrapper .items p {
+                      font-weight: 600;
+                      font-size: 13px;
+                      line-height: 22px;
+                      letter-spacing: 4px;
+                      color: var(--text-color);
+                  }
+
+                  .wrapper .items ul li {
+                      list-style-type: none;
+                      font-size: 17px;
+                      line-height: 30px;
+                      padding: 6% 0%;
+                      color: var(--text-color);
+                      opacity: 0.7;
+                  }
+                  .wrapper .items ul {
+                      padding: 0%;
+                  }
+                  
+                  @media screen and (min-width: 414px) and (max-width: 896px){
+                      .main-container{
+                          overflow-x: hidden;
+                      }
+                      .banner {
+                          flex-direction: column;
+                          width: 80%;
+                      }
+
+                      .banner .content h2 {
+                          font-size: 57px;
+                      }
+                      .feature .feature-wrapper {
+                          flex-direction: column;
+                          
+                      }
+                      .gallery .image img {
+                          width: 100%;
+                          margin-bottom: 5%;
+                      }
+                      .gallery .image {
+                          flex-direction: column;
+                         
+ 
+                      }
+
+                      .footer .wrapper {
+                          flex-direction: column;
+                      }
+                  }
+
+                  @media screen and (min-width: 820px) and (max-width: 1180px){
+
+                      .feature .feature-wrapper {
+                          flex-direction: column;
+                      }
+
+                      .gallery .image {
+                          flex-direction: column;
+                          align-items: center;
+                      }
+
+                      .footer .wrapper {
+                          flex-direction: column;
+                          align-items: center;
+                      }
+
+                      .main-container{
+                          overflow-x: hidden;
+                         }
+
+                        }
+
+                        @media screen and (min-width: 1025px) and (max-width: 1200px)
+                 
+                  
+                      
+                  
+    </style>
+</head>
+
+<body>
+    <div class="main container">
+        <!--navbar section-->
+        <header class="navbar">
+            <div class="logo">
+                <h1>Graphics</h1>
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!--banner section-->
+
+        <section class="container banner">
+            <div class="image">
+                <img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1213.jpg?t=st=1652127968~exp=1652128568~hmac=0ba7d4880362dbd70e11f6e11ccfc82ff360510a942133da4d747f78314836f3&w=740" alt="" />
+            </div>
+
+            <div class="content">
+                <h4>GRAPHICS DESIGN FOR ALL</h4>
+                <h2>Bring back the classic look by using Css. Easy to use!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum recusandae, quidem assumenda quos nihil inventore!</p>
+                <button class="btn">Explore</button>
+            </div>
+        </section>
+
+        <!--feature section-->
+        <section class="container feature">
+            <div class="feature-wrapper">
+                <div class="feature">
+                <div class="icon"><i class="fa-solid fa-star"></i></div>
+                <div class="content">
+                    <h2>Best Quality</h2>
+                    <p>A team of experts passionate about management.</p>
+                    </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="icon"><i class="fa-solid fa-star"></i></div>
+                        <div class="content">
+                            <h2>Best Quality</h2>
+                            <p>A team of experts passionate about management.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="icon"><i class="fa-solid fa-star"></i></div>
+                        <div class="content">
+                            <h2>Best Quality</h2>
+                            <p>A team of experts passionate about management.</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <section class="container gallery">
+            <div class="content">Explore our exclusive DESIGN</div>
+            <div class="image">
+                <div class="flex-item">
+                    <img src="https://img.freepik.com/free-vector/programmer-working-flat-style_52683-15041.jpg?t=st=1652206020~exp=1652206620~hmac=adec4259b31072c9d7f310ad692fd2c5f12633ddd56473c2a9e8138d88eab6e5&w=740" width="400px" height="500px">
+                </div>
+
+                <div class="flex-item">
+                    <img src="https://img.freepik.com/free-vector/programmer-working-flat-style_52683-15041.jpg?t=st=1652206020~exp=1652206620~hmac=adec4259b31072c9d7f310ad692fd2c5f12633ddd56473c2a9e8138d88eab6e5&w=740" width="400px" height="500px">
+                </div>
+
+                <div class="flex-item">
+                    <img src="https://img.freepik.com/free-vector/programmer-working-flat-style_52683-15041.jpg?t=st=1652206020~exp=1652206620~hmac=adec4259b31072c9d7f310ad692fd2c5f12633ddd56473c2a9e8138d88eab6e5&w=740" width="400px" height="500px">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="video-demo">
+            <div class="content">
+                <h1>It war super easy to share my unique concept. It was nice design. great service!</h1>
+            </div>
+            <div class="video-content">
+                <div class="video">
+                <a href="https://www.freepik.com/search?format=search&query=coding">
+                    <i class="fa-solid fa-play"></i>
+                </a>
+                </div>
+               
+            </div>
+        </section>
+
+        <section class="container newsletter">
+            <div class="content">
+                <h1>Subscribe to our channel to get updated</h1>
+                <p>Get our latest update on your inbox. with lots of unique block, you can eaisly build a page without</p>
+            </div>
+
+            <div class="newsletter-form">
+                <form action="">
+                    <div class="form">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter email address">
+                        <button class="btn">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="wrapper">
+                <div  class="items">
+                    <p>Contact</p>
+                    <ul>
+                        <li>UI Design</li>
+                        <li>Frontend</li>
+                        <li>Backend</li>
+                    </ul>
+                </div>
+
+                <div  class="items">
+                    <p>Contact</p>
+                    <ul>
+                        <li>UI Design</li>
+                        <li>Frontend</li>
+                        <li>Backend</li>
+                    </ul>
+                </div>
+
+                <div  class="items">
+                    <p>Contact</p>
+                    <ul>
+                        <li>UI Design</li>
+                        <li>Frontend</li>
+                        <li>Backend</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
